@@ -8,6 +8,9 @@
     "timezone": "EST"
   },
   {
+    "name": "maathavan",
+    "timezone": "UTC+5.30"
+  {
     "name": "scoopgracie",
     "timezone": "PST"
   }
