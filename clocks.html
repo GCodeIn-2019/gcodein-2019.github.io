@@ -45,32 +45,28 @@
 			<small>Google Code-in and the Google Code-in logo are trademarks of Google, LLC. The authors of this site are in no way affiliated with Google, LLC.</small>
 		</footer>
 		<script>
-			(function clocks() {
-				fetch('clocks.json')
-					.then(function(people) {
-						people.json().then(function (json) {json.forEach(function(el) {
-							var clock = document.createElement('div')
-							clock.className = "clock"
-							var heading = document.createElement('h3')
-							heading.textContent = el.name
-							clock.appendChild(heading)
-							var display = document.createElement('div')
-							display.setAttribute('data-timezone', el.timezone)
-							display.textContent = "Loading..."
-							clock.appendChild(display)
-							document.querySelector('.clocks').appendChild(clock)
-							/*document.getElementsByClassName('clocks')[0].innerHTML +=
-								`<div class="clock">
-								<h3>${el.name}</h3>
-								<
-								<iframe scrolling="no" clocktype="html5"
-								src="https://www.clocklink.com/html5embed.php?clock=042&timezone=
-								${el.timezone}
-								&color=blue&size=356&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=blue"></iframe>
-								</div>`*/
-						})})
-					})
-			}());
+			fetch('clocks.json')
+				.then(function(people) {
+					people.json().then(function (json) {json.forEach(function(el) {
+						var clock = document.createElement('div')
+						clock.className = "clock"
+						var heading = document.createElement('h3')
+						heading.textContent = el.name
+						clock.appendChild(heading)
+						var display = document.createElement('div')
+						display.setAttribute('data-timezone', el.timezone)
+						display.textContent = "Loading..."
+						display.className = "display"
+						clock.appendChild(display)
+						document.querySelector('.clocks').appendChild(clock)
+					})})
+				})
+			setInterval(function() {
+				document.querySelectorAll('.clock').forEach(function (el) {
+					el.querySelector('.display').textContent = moment().format('HH:mm:ss')
+				})
+
+			}, 100)
 		</script>
 	</body>
 </html>
