@@ -8,11 +8,7 @@
     "timezone": "EST"
   },
   {
-    "name": "maathavan",
-    "timezone": "GMT0530"
-  },
-  {
     "name": "scoopgracie",
-    "timezone": "PST"
+    "timezone": "America/Los_Angeles"
   }
 ]
