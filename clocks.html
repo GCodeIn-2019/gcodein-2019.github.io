@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>Clocks - Google Code-in 2019 (Unofficial Site)</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data-10-year-range.min.js"></script>
+		<link rel="stylesheet" href="fonts.css">
+		<link rel="stylesheet" href="colors.css">
+		<style>
+			.clock {
+				display: inline-block;
+				background-color: #cccccc;
+				border-radius: 15px;
+				padding: 3px;
+				margin: 2px;
+			}
 
-<head>
-	<title>Clocks - Google Code-in 2019 (Unofficial Site)</title>
-	<link rel="stylesheet" href="fonts.css">
-	<link rel="stylesheet" href="colors.css">
-	<style>
-		.clock {
-			display: inline-block;
-			background-color: #cccccc;
-			border-radius: 15px;
-			padding: 3px;
-			margin: 2px;
-		}
+			h3 {
+				margin: 0px;
+				padding: 3px;
+				padding-left: 0px;
+			}
 
-		h3 {
-			margin: 0px;
-			padding: 3px;
-			padding-left: 0px;
-		}
+			iframe {
+				overflow: hidden;
+				border: 0;
+				margin: 0;
+				padding: 0;
+				width: 356px;
+				height: 180px;
+				border: none;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
 
-		iframe {
-			overflow: hidden;
-			border: 0;
-			margin: 0;
-			padding: 0;
-			width: 356px;
-			height: 180px;
-			border: none;
-		}
-	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-	<header>
-		<h1><a href="./">Google Code-in 2019 Students (Unofficial)</a></h1>
-	</header>
-	<main>
-		<div class="clocks"></div>
-	</main>
-	<footer>
-		<small>Google Code-in and the Google Code-in logo are trademarks of Google, LLC. The authors of this site are in no way affiliated with Google, LLC.</small>
-	</footer>
-	<script>
-		(function clocks() {
-			fetch('clocks.json')
-				.then((response) => response.json())
-				.then((people) => (
-					people.forEach((el) => (
-						document.getElementsByClassName('clocks')[0].innerHTML +=
-							`<div class="clock">
-							<h3>${el.name}</h3>
-							<iframe scrolling="no" clocktype="html5"
-							src="https://www.clocklink.com/html5embed.php?clock=042&timezone=
-							${el.timezone}
-							&color=blue&size=356&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=blue"></iframe>
-							</div>`
-					))
-				));
-		}());
-	</script>
-</body>
-
+	<body>
+		<header>
+			<h1><a href="./">Google Code-in 2019 Students (Unofficial)</a></h1>
+		</header>
+		<main>
+			<div class="clocks"></div>
+		</main>
+		<footer>
+			<small>Google Code-in and the Google Code-in logo are trademarks of Google, LLC. The authors of this site are in no way affiliated with Google, LLC.</small>
+		</footer>
+		<script>
+			(function clocks() {
+				fetch('clocks.json')
+					.then(function(people) {
+						people.json.forEach(function(el) {
+							var clock = document.createElement('div')
+							clock.className = "clock"
+							var heading = document.createElement('h3')
+							heading.textContent = el.name
+							clock.appendChild(heading)
+							var display = document.createElement(div)
+							display.setAttribute('data-timezone', el.timezone)
+							display.textContent = "Loading..."
+							clock.appendChild(display)
+							document.querySelector('.clocks').appendChild(clock)
+							/*document.getElementsByClassName('clocks')[0].innerHTML +=
+								`<div class="clock">
+								<h3>${el.name}</h3>
+								<
+								<iframe scrolling="no" clocktype="html5"
+								src="https://www.clocklink.com/html5embed.php?clock=042&timezone=
+								${el.timezone}
+								&color=blue&size=356&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=blue"></iframe>
+								</div>`*/
+						})
+					})
+			}());
+		</script>
+	</body>
 </html>
