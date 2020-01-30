@@ -50,11 +50,11 @@
 					people.json().then(function (json) {json.forEach(function(el) {
 						var clock = document.createElement('div')
 						clock.className = "clock"
+						clock.setAttribute('data-timezone', el.timezone)
 						var heading = document.createElement('h3')
 						heading.textContent = el.name
 						clock.appendChild(heading)
 						var display = document.createElement('div')
-						display.setAttribute('data-timezone', el.timezone)
 						display.textContent = "Loading..."
 						display.className = "display"
 						clock.appendChild(display)
