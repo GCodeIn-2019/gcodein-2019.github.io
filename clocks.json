@@ -8,6 +8,10 @@
     "timezone": "EST"
   },
   {
+    "name": "maathavan",
+    "timezone": "Asia/Colombo"
+  },
+  {
     "name": "scoopgracie",
     "timezone": "America/Los_Angeles"
   }
