@@ -48,7 +48,7 @@
 			(function clocks() {
 				fetch('clocks.json')
 					.then(function(people) {
-						people.json().forEach(function(el) {
+						people.json().then(function (json) {json.forEach(function(el) {
 							var clock = document.createElement('div')
 							clock.className = "clock"
 							var heading = document.createElement('h3')
@@ -68,7 +68,7 @@
 								${el.timezone}
 								&color=blue&size=356&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=blue"></iframe>
 								</div>`*/
-						})
+						})})
 					})
 			}());
 		</script>
