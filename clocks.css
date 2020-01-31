@@ -2,8 +2,8 @@
 	display: inline-block;
 	background-color: #888888;
 	border-radius: 15px;
-	padding: 3px;
-	margin: 2px;
+	padding: 1em;
+	margin-right: .5em;
 }
 
 h3 {
