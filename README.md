@@ -4,7 +4,7 @@ Unofficial GCI 2019 Website
 Current pages:
 
 - [`index.html`](index.html) - Main page, links to IRC
-- [`clocks`](clocks/clocks.html) - Shows the clocks with the correct timezones for members. You can add clocks in the [`clocks.json`](clocks/clocks.json) file
+- [`clocks`](clocks/index.html) - Shows the clocks with the correct timezones for members. You can add clocks in the [`clocks.json`](clocks/clocks.json) file
 
 Links:
 
