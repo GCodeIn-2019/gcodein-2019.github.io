@@ -1,7 +1,7 @@
 const lightSwitchKey = 'light-switch';
 let lightSwitch = window.localStorage.getItem(lightSwitchKey);
 if (lightSwitch === null) {
-    lightSwitch = 'f';
+    lightSwitch = 't';
     window.localStorage.setItem(lightSwitchKey, lightSwitch);
 }
 
@@ -24,8 +24,11 @@ function getChecked() {
 }
 
 window.onload = function() {
-    const input = document.getElementById('light-theme-input');
-    input.addEventListener('change', changeTheme);
-    input.checked = lightSwitch === 'f';
-    setColors(lightSwitch);
+    try {
+        const input = document.getElementById('light-theme-input');
+        input.addEventListener('change', changeTheme);
+        input.checked = lightSwitch === 'f';
+    } finally {
+        setColors(lightSwitch)
+    }
 }
