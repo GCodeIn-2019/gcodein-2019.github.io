@@ -1,0 +1,13 @@
+.clock {
+  display: inline-block;
+  background-color: #888888;
+  border-radius: 15px;
+  padding: 3px;
+  margin: 2px;
+}
+
+h3 {
+  margin: 0px;
+  padding: 3px;
+  padding-left: 0px;
+}
