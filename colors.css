@@ -1,12 +1,12 @@
-[data-theme="dark"] {
-    --back-color : black;
-    --fore-color : white;
-}
-
-/* The light theme */
-:root {
+[data-theme="light"] {
     --back-color : white;
     --fore-color : black;
+}
+
+/* The dark theme */
+:root {
+    --back-color : black;
+    --fore-color : white;
 }
 
 body {
