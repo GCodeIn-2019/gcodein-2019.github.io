@@ -1,4 +1,9 @@
-[{
+[
+  {
+    "name": "alcarazzam",
+    "timezone": "Europe/Madrid"
+  },
+  {
     "name": "diogoscf",
     "timezone": "CET"
   },
