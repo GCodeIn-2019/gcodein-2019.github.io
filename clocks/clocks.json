@@ -12,6 +12,10 @@
     "timezone": "EST"
   },
   {
+    "name": "intello",
+    "timezone": "Asia/Kolkata"
+  },
+  {
     "name": "maathavan",
     "timezone": "Asia/Colombo"
   },
