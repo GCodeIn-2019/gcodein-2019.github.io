@@ -1,4 +1,4 @@
-# gcodein-2019.github.io
+# gcodein.github.io
 Unofficial GCI 2019 Website
 
 Current pages:
@@ -8,4 +8,4 @@ Current pages:
 
 Links:
 
-- [Website](https://gcodein-2019.github.io)
+- [Website](https://gcodein.github.io)
