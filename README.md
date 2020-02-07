@@ -1,4 +1,5 @@
 # gcodein.github.io
+**__PLEASE DON'T CONTRIBUTE!__** I am porting this over to a static site generator.
 Unofficial GCI 2019 Website
 
 Current pages:
