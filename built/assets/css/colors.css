@@ -1,0 +1,21 @@
+[data-theme="light"] {
+    --back-color : white;
+    --fore-color : black;
+    --links      : #0000FF
+}
+
+/* The dark theme */
+:root {
+    --back-color : black;
+    --fore-color : white;
+    --links      : #CCEEFF
+}
+
+body {
+	background-color: var(--back-color);
+	color: var(--fore-color);
+}
+
+a {
+	color: var(--links)
+}

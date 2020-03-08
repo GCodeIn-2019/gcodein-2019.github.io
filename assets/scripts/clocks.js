@@ -1,4 +1,4 @@
-fetch('clocks.json')
+fetch('/assets/clocks.json')
   .then(function (people) {
     people.json().then(function (json) {
       json.forEach(function (el) {

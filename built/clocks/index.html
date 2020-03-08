@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GCodeIn</title>
-		<link rel=stylesheet href=fonts.css>
-		<link rel=stylesheet href=colors.css>
-		<link rel=stylesheet href=styles.css>
+		<title>Clocks - GCodeIn</title>
+		<link rel=stylesheet href=/assets/css/fonts.css>
+		<link rel=stylesheet href=/assets/css/colors.css>
+		<link rel=stylesheet href=/assets/css/styles.css>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.min.js"></script>
+<link rel=stylesheet href="/assets/css/clocks.css">
+
 	</head>
 	<body>
 		<header>
 			<a href=https://scoopgracie.com/botpoison/botpoison.php style=display:none rel=nofollow>link</a>
 			<hgroup>
-				<h1>GCodeIn</h1>
-				<h2>Home</h2>
+				<h1><a href=/>GCodeIn</a></h1>
+				<h2>Clocks</h2>
 			</hgroup>
 		</header>
 		<main>
-			<p>Welcome to GCodeIn, an unofficial <dfn>GCI</dfn> (Google Code-in) students group!</p>
-			<p><a href="irc://chat.freenode.net/#gcodein">Join us on IRC!</a> (<kbd>#gcodein</kbd> on freenode) <a href=/irc>(full details here)</a></p>
-			<p>We are compiling a list of time zones of our members. <a href="./clocks">Check out our clocks page!</a></p>
-			<p>We also have <a href=https://gcodein-blog.blogspot.com>a blog</a>! If you want to write an article, please get in touch on IRC.</p>
-			<p>Also, we are currently looking for a logo designer. If you want to create a logo, please contact us on IRC!</p>
+<div class=clocks></div>
+<script src=/assets/scripts/clocks.js></script>
+
 		</main>
 		<footer>
 			<small>Google Code-in and the Google Code-in logo are trademarks of Google, LLC. The authors of this site are in no way affiliated with Google, LLC.</small>
+			<small><a href=https://scoopgracie.com/build-gcodein.php rel=nofollow>Rebuild from source</a></small>
 		</footer>
 		<div class="light-dark-switcher">
-			<img class="light-dark-label" src="images/sunmoon.svg"/>
+			<img class="light-dark-label" src="/assets/images/sunmoon.svg"/>
 			<label class="switch">
 				  <input id="light-theme-input" type="checkbox">
 				  <span class="slider"></span>

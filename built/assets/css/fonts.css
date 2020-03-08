@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Ubuntu&display=swap');
+* {
+	font-family: "Noto Sans", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Ubuntu, sans-serif;
+}

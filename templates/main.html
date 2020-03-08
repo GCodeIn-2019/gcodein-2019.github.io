@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{{title}}} - GCodeIn</title>
+		<link rel=stylesheet href=/assets/css/fonts.css>
+		<link rel=stylesheet href=/assets/css/colors.css>
+		<link rel=stylesheet href=/assets/css/styles.css>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
+{{ehead}}
+	</head>
+	<body>
+		<header>
+			<a href=https://scoopgracie.com/botpoison/botpoison.php style=display:none rel=nofollow>link</a>
+			<hgroup>
+				<h1><a href=/>GCodeIn</a></h1>
+				<h2>{{{title}}}</h2>
+			</hgroup>
+		</header>
+		<main>
+{{main}}
+		</main>
+		<footer>
+			<small>Google Code-in and the Google Code-in logo are trademarks of Google, LLC. The authors of this site are in no way affiliated with Google, LLC.</small>
+			<small><a href=https://scoopgracie.com/build-gcodein.php rel=nofollow>Rebuild from source</a></small>
+		</footer>
+		<div class="light-dark-switcher">
+			<img class="light-dark-label" src="/assets/images/sunmoon.svg"/>
+			<label class="switch">
+				  <input id="light-theme-input" type="checkbox">
+				  <span class="slider"></span>
+			</label>
+		</div>
+		<script type="text/javascript">
+			// We need to set the checked value to the correct value so the control will look
+			// right, and we have to do it at the correct time. We can't do it before the input element
+			// exists, and if we wait until window.load, the animation will happen.
+			document.getElementById('light-theme-input').checked = lightSwitch === 'f';
+		</script>
+	</body>
+</html>
